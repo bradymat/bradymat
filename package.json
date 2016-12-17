@@ -1,0 +1,48 @@
+{
+  "name": "bradymat",
+  "version": "1.0.0",
+  "description": "bradymat",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo . -d --serve bundle.js --live",
+    "build": "browserify . -o bundle.js -g uglifyify",
+    "test": "browserify test/index.js | node | tap-spec",
+    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
+    "push": "gh-pages -d dist",
+    "deploy": "npm run build && npm run dist && npm run push"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradymat/bradymat"
+  },
+  "author": "bradymat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bradymat/bradymat/issues"
+  },
+  "homepage": "https://github.com/bradymat/bradymat",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "budo": "^8.2.0",
+    "clone": "^2.1.0",
+    "gh-pages": "^0.11.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "redux": "^3.6.0",
+    "sheet-router": "^4.1.4",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
+  }
+}
