@@ -10,7 +10,7 @@ body {
 }
 
 .menu-item, .menu-open-button {
-  background: #00bcd4;
+  background: #F7BA7B;
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -88,7 +88,7 @@ body {
 
 .menu-item:hover {
   background: white;
-  color: #00bcd4;
+  color: #F7BA7B;
 }
 .menu-item:nth-child(3) {
   -webkit-transition-duration: 180ms;

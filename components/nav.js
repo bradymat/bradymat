@@ -12,7 +12,6 @@ export default (dispatch) => {
       <a onClick={() => changePage('/')} className="menu-item"> Home </a>
       <a onClick={() => changePage('/page1')} className="menu-item"> Projects </a>
       <a onClick={() => changePage('/page2')} className="menu-item"> Contact </a>
-
     </nav>
   )
 
